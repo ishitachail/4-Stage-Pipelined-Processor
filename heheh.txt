@@ -1,0 +1,28 @@
+`include "define.v"
+
+module ID_EXE_stage (
+	// input  
+	clk,  rst, rdata1, rdata2, inst, alusrc
+	//output
+	rdataout1, rdtata2out, inst
+);
+
+// inputs
+input clk;
+input rst;
+input [`DSIZE-1:0] rdata1;
+input [`DSIZE-1:0] rdata2;
+input  [`ISIZE-1:0] inst;
+
+// outputs
+output  [`DSIZE-1:0] aluout;
+
+
+//Here we need not take write enable (wen) as it is always 1 for R and I type instructions.
+//ID_EXE register to save the values.
+
+
+
+endmodule
+
+
